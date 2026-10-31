@@ -1,0 +1,10 @@
+numpy
+python-dotenv
+chromadb
+langchain-core
+langchain-text-splitters
+voyageai            # only if you use the "voyage" provider
+cohere              # only if you use the "cohere" provider
+sentence-transformers  # only if you use the "local" provider
+anthropic           # only if RERANK_ENABLED and RERANK_PROVIDER = "anthropic"
+google-genai        # only if RERANK_ENABLED and RERANK_PROVIDER = "gemini"
