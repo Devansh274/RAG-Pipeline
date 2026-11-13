@@ -313,22 +313,6 @@ All settings are in `config.py`. Defaults shown are the values shipped in that f
 | `METADATA_HEADER_CHARS` | `1500` | Leading characters of each document used as its header. |
 | `METADATA_FILENAME_WEIGHT` | `3` | Weight of file-name tokens in BM25. |
 
-### Models, storage and reranking
-
-| Setting | Default | Meaning |
-|---|---|---|
-| `MODELS` | Voyage `voyage-4-large` | List of `{"provider", "name"}` embedding models to compare. |
-| `USE_CHROMA` | `True` | Persist embeddings on disk. `False` re-embeds every run. |
-| `CHROMA_DIR` | `chroma_db` | Database folder. |
-| `CHROMA_REBUILD` | `False` | Delete and rebuild this run's collection. |
-| `CHROMA_ADD_BATCH` | `500` | Chunks embedded and saved per step. |
-| `RERANK_ENABLED` | `False` | Enable reranking. |
-| `RERANK_PROVIDER` | `"gemini"` | `"voyage"`, `"gemini"` or `"anthropic"`. |
-| `RERANK_MODEL` | `"gemini-3.5-flash-lite"` | Model name for the chosen provider (for Voyage, `"rerank-2.5"`). |
-| `RERANK_CANDIDATE_POOL` | `20` | Cosine-ranked chunks handed to the reranker. Must be at least `TOP_K`. |
-| `RERANK_MAX_CHARS_PER_CHUNK` | `650` | Per-chunk truncation in the LLM prompt. Ignored by the Voyage reranker, but the setting must still exist in `config.py`. |
-| `ANSWER_PREVIEW_CHARS` | `100` | Characters of each retrieved chunk printed. |
-
 ---
 
 ## Caveats and interpreting results
